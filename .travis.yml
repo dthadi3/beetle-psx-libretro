@@ -29,8 +29,9 @@ before_script:
   - g++-7 --version
   - g++ --version
   - |
-    if [[ "$TRAVIS_CPU_ARCH" = "ppc64le" ]]; then
-    sudo apt-get -y install mesa-common-dev
+    if [[ "$TRAVIS_CPU_ARCH" = "ppc64le" ]]; then 
+    sudo apt-get -y install mesa-common-dev; 
+    fi
 script:
   - cd ~/
   - git clone --depth=50 https://github.com/libretro/libretro-super
